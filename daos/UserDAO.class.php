@@ -40,7 +40,7 @@ class UserDAO {
     }
 	
 	public static function login($email, $password) {
-		$user = self::getUser("''",$email);
+		$user = self::getUser("null",$email);
 		if (!is_null($user)) {
 			$id = $user->get_id();
 			$passwordHash = $user->get_password();
